@@ -16,8 +16,8 @@ function tocarFaixa(){
 
 function pausarFaixa(){
     audioCapitulo.pause();
-    botaoPlayPause.classList.add('bi-pause-circle-fill');
-    botaoPlayPause.classList.remove('bi-play-circle-fill');
+    botaoPlayPause.classList.remove('bi-pause-circle-fill');
+    botaoPlayPause.classList.add('bi-play-circle-fill');
 }
 
 function tocarOuPausar(){
@@ -34,8 +34,8 @@ function trocarNomeFaixa(){
     nomeCapitulo.innerText = 'Capítulo ' + capituloAtual;
 }
 function proximaFaixa(){
-    if(capituloAtual === 1){
-        capituloAtual = numeroCapitulos;
+    if(capituloAtual === numeroCapitulos){
+        capituloAtual = 1;
     } else {
         capituloAtual = capituloAtual + 1;
     }
@@ -59,6 +59,6 @@ function voltarFaixa(){
     trocarNomeFaixa();
 }
 
-botaoPlayPause.addEventListener('click', tocarFaixa);
+botaoPlayPause.addEventListener('click', tocarOuPausar);
 botaoAvancar.addEventListener('click', proximaFaixa);
 botaoAnterior.addEventListener('click', voltarFaixa);
