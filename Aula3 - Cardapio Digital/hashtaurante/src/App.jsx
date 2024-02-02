@@ -16,12 +16,12 @@ function App() {
       <Navegacao alterarPaginaSelecionada={alterarPaginaSelecionada} />
       <div className="menu">
         {secoesMenu[paginaSelecionada].map((prato) => (
-          <ItemCardapio
-            nome={prato.nome}
-            preco={prato.preco}
-            descricao={prato.descricao}
-            imagem={prato.imagem}
-          />
+                                                        <ItemCardapio
+                                                          nome={prato.nome}
+                                                          preco={prato.preco}
+                                                          descricao={prato.descricao}
+                                                          imagem={prato.imagem}
+                                                        />
         ))}
       </div>
     </>
